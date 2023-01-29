@@ -2,7 +2,7 @@ package com.example.menu.security;
 
 import com.example.menu.security.jwt.AuthEntryPointJwt;
 import com.example.menu.security.jwt.AuthTokenFilter;
-import com.example.menu.security.services.UserDetailsServiceImpl;
+import com.example.menu.services.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

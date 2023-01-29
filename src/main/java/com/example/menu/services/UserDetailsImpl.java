@@ -1,4 +1,4 @@
-package com.example.menu.security.services;
+package com.example.menu.services;
 
 import java.util.Collection;
 import java.util.List;
@@ -23,6 +23,8 @@ public class UserDetailsImpl implements UserDetails {
 
     @JsonIgnore
     private String password;
+    private String location;
+
 
     private Collection<? extends GrantedAuthority> authorities;
 
@@ -59,6 +61,9 @@ public class UserDetailsImpl implements UserDetails {
 
     public String getEmail() {
         return email;
+    }
+    public String getLocation() {
+        return location;
     }
 
     @Override

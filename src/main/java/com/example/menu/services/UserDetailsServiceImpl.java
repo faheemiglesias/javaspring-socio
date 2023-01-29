@@ -1,4 +1,4 @@
-package com.example.menu.security.services;
+package com.example.menu.services;
 
 import com.example.menu.model.User;
 import com.example.menu.repository.UserRepository;

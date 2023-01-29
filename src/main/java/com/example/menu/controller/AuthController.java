@@ -17,7 +17,7 @@ import com.example.menu.payload.response.MessageResponse;
 import com.example.menu.repository.RoleRepository;
 import com.example.menu.repository.UserRepository;
 import com.example.menu.security.jwt.JwtUtils;
-import com.example.menu.security.services.UserDetailsImpl;
+import com.example.menu.services.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -89,7 +89,8 @@ public class AuthController {
         // Create new user's account
         User user = new User(signUpRequest.getUsername(),
                 signUpRequest.getEmail(),
-                encoder.encode(signUpRequest.getPassword()));
+                encoder.encode(signUpRequest.getPassword())
+                );
 
         Set<String> strRoles = signUpRequest.getRole();
         Set<Role> roles = new HashSet<>();
